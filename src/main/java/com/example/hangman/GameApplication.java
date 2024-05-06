@@ -24,7 +24,7 @@ public class GameApplication extends Application {
         controller.setGame(game);
         game.setController(controller);
 
-        stage.setTitle("H!");
+        stage.setTitle("Hangman!");
         stage.setScene(scene);
         stage.show();
 

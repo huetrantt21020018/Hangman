@@ -1,11 +1,20 @@
 package com.example.hangman;
 
+import java.util.Random;
+
 public class Word {
     private final String secretWord;
     private StringBuffer guessedWord;
 
+    private final String[] WORD_LIST = {"laptop", "table", "human", "hello", "what"};
+    String chooseWord()
+    {
+        int randomIndex = new Random().nextInt(WORD_LIST.length);
+        return WORD_LIST[randomIndex];
+    }
+
     public Word() {
-        secretWord = "hangman";
+        secretWord = chooseWord();
         guessedWord = new StringBuffer();
         guessedWord.append("_".repeat(secretWord.length()));
     }
